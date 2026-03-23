@@ -1,0 +1,28 @@
+<h1>Opname - ACC INVESTMENT</h1>
+
+<form onsubmit="event.preventDefault(); showFee();">
+  <input type="text" id="accnum" placeholder="Bankrekeningnummer" required><br>
+  <input type="text" id="accname" placeholder="Naam rekeninghouder" required><br>
+  
+  <select id="bank" required>
+    <option value="">Selecteer bank</option>
+    <option>Rabobank</option>
+    <option>ING Bank</option>
+    <option>ABN AMRO</option>
+    <option>SNS Bank</option>
+    <option>ASN Bank</option>
+    <option>RegioBank</option>
+  </select><br>
+
+  <input type="text" id="amount" value="€0,00" readonly><br>
+
+  <button type="submit" id="withdrawBtn">Opnemen</button>
+  <button type="button" id="backBtn" onclick="window.location.href='index.html'">Terug</button>
+</form>
+
+<div id="feeModal" class="modal">
+  <div class="modal-content">
+    <h3>Er is een opnamevergoeding van toepassing.</h3>
+    <button class="close-btn" onclick="closeModal()">Sluiten</button>
+  </div>
+</div>
